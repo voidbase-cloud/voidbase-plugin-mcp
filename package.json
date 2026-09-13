@@ -1,0 +1,42 @@
+{
+  "name": "@voidbase-cloud/plugin-mcp",
+  "version": "0.9.0-beta.60",
+  "description": "The mcp plugin of voidbase: the instance as an MCP server, its tools written from its own OpenAPI document",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/voidbase-cloud/voidbase-plugin-mcp.git"
+  },
+  "homepage": "https://github.com/voidbase-cloud/voidbase-plugin-mcp#readme",
+  "exports": {
+    ".": {
+      "types": "./main.d.ts",
+      "default": "./main.js"
+    },
+    "./manifest.json": "./manifest.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "main.js",
+    "main.d.ts",
+    "manifest.json",
+    "tsconfig.json",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "bun test",
+    "check": "tsc -p tsconfig.json --noEmit"
+  },
+  "peerDependencies": {
+    "@voidbase-cloud/voidbase": ">=0.9.0-beta.61"
+  },
+  "devDependencies": {
+    "@voidbase-cloud/voidbase": "^0.9.0-beta.61",
+    "hono": "^4.11.9",
+    "@types/bun": "^1.4.1",
+    "typescript": "^5.9.3"
+  }
+}
